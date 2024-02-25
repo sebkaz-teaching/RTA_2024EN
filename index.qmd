@@ -20,78 +20,65 @@ If You don't know what Python is go [here](/info).
 
 #### Lectures
 
-The lecture is carried out in hybrid mode.
-It is OPTIONAL and takes place in Aula I building G
+Lectures are OPTIONAL and takes place in G-208.
 
-1. <del>20-02-2023 (Monday) 08:00-9:30 - Lecture 1</del>
-    Completed topics:
+1. 26-02-2024 (Monday) 08:00-9:30 - Lecture 1
+    The lecture covers:
     - structured and unstructured data, 
-    - introduction to Big Data
-    - data generation processes
+    - introduction to Big Data, 
+    - data generation processes, 
     - OLAP and OLTP data processing models.
 
-2. <del>27-02-2023 (Monday) 08:00-9:30 - Lecture 2</del>
-    Completed topics:
-    - batch processing vs data stream processing
-    - ETL
-    - the MapReduce pattern
-    - business requirements for the data stream
-    - definitions of: event, event stream processing, event analysis,
-    - batch apps and streaming apps
-3. <del>06-03-2023 (Monday) 08:00-9:30 - Lecture 3</del>
-    Completed topics:
-    - Time in streaming data processing
-    - Operation of the client-server system: REST API
-4. <del>13-03-2023 (Monday) 08:00-9:30 - Lecture 4</del>
-    Completed topics: 
-    - Lambda and Kappa architectures
-    - pub/sub communication for Apache Kafka
+2. 04-03-2024 (Monday) 08:00-9:30 - Lecture 2
 
-Lectures end with a TEST: 10 questions - 20 minutes.
-The test is conducted via MS Teams.
+3. 11-03-2024 (Monday) 08:00-9:30 - Lecture 3
+
+4. 18-03-2024 (Monday) 08:00-9:30 - Lecture 4
+
+5. 18-03-2024 (Monday) 08:00-9:30 - Lecture 5
+
+Lectures end with a TEST: 20 questions - 30 minutes.
+
+The test will be conducted using MS Teams.
 
 #### Labs
 
-1. <del>21-03-2023 (tuesday) 08:00-11:30 - C4D 2 groups</del>
-2. <del>28-03-2023 (tuesday) 08:00-11:30 - C4D, 2 grupy</del>
-3. <del>04-04-2023 (tuesday) 08:00-11:30 - C4D, 2 grupy </del>
-4. <del>18-04-2023 (tuesday) 08:00-11:30 - C4D, 2 grupy </del>
-5. <del>25-04-2023 (tuesday) 08:00-11:30 - C4D, 2 grupy </del>
-6. <del> 09-05-2023 (tuesday) 08:00-11:30 - C4D, 2 grupy </del>
-7. <del> 16-05-2023 (tuesday) 08:00-11:30 - C4D, 2 grupy </del>
-8. <del> 23-05-2023 (tuesday) 08:00-11:30 - C4D, 2 grupy </del>
-9. 30-05-2023 (tuesday) 08:00-11:30 - C4D, 2 grupy
-10. 06-06-2023 (tuesday) 08:00-11:30 - C4D, 2 grupy 
+1. 09-04-2024 (Tuesday) 9:50-11:30 - C2B 
+2. 16-04-2024 (Tuesday) 9:50-11:30 - C2B
+3. 23-04-2024 (Tuesday) 9:50-11:30 - C2B 
+4. 30-04-2024 (Tuesday) 9:50-11:30 - C2B 
+5. 07-05-2024 (Tuesday) 9:50-11:30 - C2B 
+6. 14-05-2024 (Tuesday) 9:50-11:30 - C2B 
+7. 21-05-2024 (Tuesday) 9:50-11:30 - C2B 
+8. 28-05-2024 (Tuesday) 9:50-11:30 - C2B 
+9. 04-06-2023 (Tuesday) 9:50-11:30 - C2B
 
 #### Place
 
-Lectures 1-4: G-Aula I
-Labs 1-10: C-4D
+Lectures 1-4: G-208
+Labs 1-10: C-2B
 
 #### Exam
 
-Lectures will end with a test (last class).
-Positive evaluation of the test (above 13 points) entitles you to carry out the exercises.
+The lectures will conclude with a test on the last day of class.
+If you score above 13 points on the test, you will be eligible to carry out the exercises.
 
-After the exercises, homework will be carried out via the MS teams' platform.
-Passing all exercises and tasks entitles you to complete the project.
+Once you have completed the exercises, you will need to submit your homework through the MS Teams platform.
+ If you pass all the exercises and tasks, you will be allowed to complete the project.
 
-The project should be carried out in groups of no more than 5 people.
+You can work on the project in groups of up to five people. Here are the requirements for the project:
 
-Project requirements:
-
-- The project should present a BUSINESS PROBLEM that can be implemented using the information provided online. (This does not mean that you cannot use batch processing, e.g. to generate a model).
-- Data should be sent to Apache Kafka and further processed and analyzed from there.
-- The programming language is free - applies to each component of the project.
-- BI tools can be used
-- Data sources can be a table, artificially generated data, IoT, etc.
+- Your project must address a BUSINESS PROBLEM that can be implemented using online information. You can use batch processing, such as generating a model, if needed.
+- You must send data to Apache Kafka for further processing and analysis.
+- You can use any programming language for your project components.
+- BI tools are allowed.
+- Your data sources can include tables, artificially generated data, IoT, and more.
 
 ## Technology
 
 Participating in the classes, you must know and at least use the following information technologies:
 
 1. [GIT](https://sebkaz-teaching.github.io/RTA_2023EN/info/) 
-2. Python, Jupyter notebook, Jupyter lab, Colab
+2. Python, Jupyter notebook
 3. [Docker](https://sebkaz-teaching.github.io/RTA_2023EN/info/)
-4. **Apache Spark**, Apache Flink, **Apache Kafka**, Apache Beam
-5. Databricks Community edition [Web page](https://community.cloud.databricks.com/login.html).
+4. **Apache Spark**, Apache Flink, **Apache Kafka**.

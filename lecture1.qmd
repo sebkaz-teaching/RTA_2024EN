@@ -5,7 +5,12 @@ title: "Lecture 1 Small data"
 The stream processing technology is becoming more and more popular with  big and small companies because it provides superior solutions for many established use cases such as data analytics, ETL, transactional apps, software architectures, and business opportunities.
 We try to describe why stateful stream processing is becoming so popular and assess its potential.
 
+In recent years, stateful stream processing has emerged as a cornerstone technology in the realm of data applications, captivating both large enterprises and small startups alike. This innovative approach offers unparalleled solutions to traditional data app architectures' limitations, particularly in areas such as data analytics, Extract, Transform, Load (ETL), transactional applications, software architectures, and business opportunities. This article aims to elucidate why stateful stream processing has garnered such widespread acclaim, while also exploring its immense potential to redefine the landscape of data application development.
+
+
 But first, we start by reviewing classical **data** app architectures and point out their limitations.
+
+
 
 
 ##  Data. From data file to data lake
