@@ -1,52 +1,105 @@
 ---
-title: "Lecture 1 Small data"
+title: "From files to Data Mash"
 ---
 
-The stream processing technology is becoming more and more popular with  big and small companies because it provides superior solutions for many established use cases such as data analytics, ETL, transactional apps, software architectures, and business opportunities.
-We try to describe why stateful stream processing is becoming so popular and assess its potential.
+In recent times, a new way of handling data called `stream processing` has become important for companies big and small. 
 
-In recent years, stateful stream processing has emerged as a cornerstone technology in the realm of data applications, captivating both large enterprises and small startups alike. This innovative approach offers unparalleled solutions to traditional data app architectures' limitations, particularly in areas such as data analytics, Extract, Transform, Load (ETL), transactional applications, software architectures, and business opportunities. This article aims to elucidate why stateful stream processing has garnered such widespread acclaim, while also exploring its immense potential to redefine the landscape of data application development.
+It's like a supercharged version of how we used to work with data.
+
+This new method is really good at solving the problems that old-fashioned data systems had trouble with, especially things like:
+  - analyzing data, 
+  - moving it around (ETL), 
+  - handling transactions, 
+  - building software, 
+  - and finding new business ideas. 
+
+Stream processing offers several advantages over traditional batch processing methodologies:
+
+  - **Real-time data processing**: Unlike batch processing, which deals with data in discrete chunks, stream processing allows for real-time or near-real-time data processing. This is crucial for applications that require immediate insights from their data.
+  
+  - **Scalability**: Stream processing systems are designed to handle large volumes of data. They can scale horizontally to accommodate data growth, making them suitable for big data applications.
+  
+  - **Fault tolerance**: Many stream processing systems are designed to be fault-tolerant. This ensures that data processing can continue uninterrupted, even if a part of the system fails.
+  
+  - **Integration with other systems**: Stream processing systems can often integrate with various data sources and sinks, making them versatile for different data pipelines. This makes it easier to build complex data processing workflows that involve multiple data sources and sinks.
+
+This lecture aims to explain the growing excitement around stream processing and its transformative impact on data-driven application development.
 
 
-But first, we start by reviewing classical **data** app architectures and point out their limitations.
+Before we dive into stream processing, let's first understand traditional data application architectures and their limitations. 
+
+In the past, data applications have mostly used **batch processing**. This means data is processed in separate chunks at specific times. Think of it like baking cookies - you can only bake as many as fit on the tray at one time.
+
+Batch processing works well in some cases, but it has problems when it comes to real-time data processing.
 
 
+Imagine you're trying to track the score of a live football game. If you're using batch processing, you might only get updates at half-time and at the end of the game. This is because batch processing can cause delays, known as latency issues.
+
+Batch processing also has trouble scaling, which means it can't always handle large amounts of data efficiently. It's like trying to bake cookies for a whole city with just one oven!
+
+Moreover, batch processing is not very flexible. If the data changes or something unexpected happens, batch processing can't adapt quickly. This can slow down businesses and prevent them from innovating.
+
+In the next part of the lecture, we'll discuss how stream processing can help overcome these limitations.
 
 
 ##  Data. From data file to data lake
 
-The development of information technology has resulted in access to unimaginable amounts of a new resources which are **structured** and **unstructured** data.
+The advancement of information technology has revolutionized the way we access and utilize data. With the availability of vast amounts of both structured and unstructured data, new opportunities have emerged for scientific and business challenges.
 
+Data plays a crucial role in the creation, collection, storage, and processing of information on an unprecedented scale. This has led to the development of numerous tools and technologies that enable us to harness the power of data.
 
-Data has contributed to the development of thousands of new tools for `generating`, `collecting`, `storing` and `processing` information on an unprecedented scale.
+Thanks to open-source software and the computing power of home computers, we can now tackle complex problems and explore new frontiers in various domains. The possibilities are endless as we continue to push the boundaries of data-driven innovation.
 
-![](img/main.jpeg){.center}
+The new era of business and scientific challenges brings forth a multitude of opportunities:
 
-
-The emergence of new scientific or business challenges becomes possible thanks to the construction of systems based on `open software`, and the use of home computers to support the processing of huge amounts of data.
-
-The new kind of business and scientific challenges include:
-
-- intelligent advertising of thousands of products for millions of customers,
-- processing of data about genes, RNA or proteins [genus](http://genus.fuw.edu.pl),
-- intelligent detection of various methods of fraud among hundreds of billions of credit card transactions,
-- stock market simulations based on thousands of financial instruments,
+- Intelligent advertising for thousands of products, targeting millions of customers.
+- Processing of data related to genes, RNA, or proteins, such as [genus](http://genus.fuw.edu.pl).
+- Intelligent detection of fraudulent activities among hundreds of billions of credit card transactions.
+- Stock market simulations based on thousands of financial instruments.
 - ...
-The data age presents us with newer and newer challenges related not only to the quantity but also to the time of data processing.
 
-All machine learning algorithms require **structured data** written in a tabular form.
-They are organized in columns of characteristics that characterize each observation (rows).
-An example may be such features as __sex__, __growth__ or __the number of owned cars__, of which it can be predicted whether the customer will repay the loan or not.
-This prediction is also collected as a feature.
-Thanks to the tables of features obtained in this way, we can use XGBoost or logistic regression algorithms to determine the appropriate combination of variables affecting the probability of a good or bad customer.
+As we enter the data age, we face not only the challenge of handling large quantities of data but also the need for faster data processing.
 
-**Unstructured data** is data that is not arranged in a tabular form.
-Examples include sound, images and text.
-In the process of processing, they are always converted into some vector form.
-However, individual letters, frequencies or pixels do not convey any information.
-They do not create separate features, which is crucial to distinguish them from structured data.
+Machine learning algorithms rely on structured data in tabular form. This data is organized into columns representing characteristics that describe each observation or row. For example, these characteristics could include sex, height, or the number of cars owned. These features are used to predict whether a customer will repay a loan or not. This prediction is also included as a feature. By utilizing tables of features created in this manner, we can employ algorithms like XGBoost or logistic regression to determine the optimal combination of variables that influence the probability of a good or bad customer.
+
+**Unstructured data** refers to data that does not have a predefined structure or format, such as sound, images, and text. Unlike structured data, which is organized in a tabular form with columns and rows, unstructured data lacks a consistent organization.
+
+When processing unstructured data, it is often converted into a vector form to enable analysis and extraction of meaningful insights. However, individual elements like letters, frequencies, or pixels do not convey specific information on their own. They need to be transformed and analyzed collectively to derive valuable features and patterns.
+
+Understanding the distinction between structured and unstructured data is crucial for effective data processing and analysis.
 
 > Give an example of structured and unstructured data. Load sample data in jupyter notebook.
+
+### Example of structured data
+```{python}
+import pandas as pd
+```
+### Create a DataFrame with structured data
+```{python}
+data = {'Name': ['John', 'Jane', 'Mike'],
+    'Age': [25, 30, 35],
+    'City': ['New York', 'London', 'Paris']}
+df = pd.DataFrame(data)
+```
+### Display the structured data
+```{python}
+print("Structured Data:")
+print(df)
+```
+### Example of unstructured data
+```{python}
+import nltk
+```
+### Load sample unstructured text data
+```{python}
+nltk.download('gutenberg')
+from nltk.corpus import gutenberg
+```
+### Display the unstructured data
+```{python}
+print("\nUnstructured Data:")
+print(gutenberg.raw('shakespeare-hamlet.txt'))
+```
 
 > Knows the types of structured and unstructured data (K2A_W02, K2A_W04, O2_W04, O2_W07)
 
