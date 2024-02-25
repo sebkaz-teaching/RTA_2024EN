@@ -9,7 +9,7 @@ It's like a supercharged version of how we used to work with data.
 This new method is really good at solving the problems that old-fashioned data systems had trouble with, especially things like:
 
   - analyzing data, 
-  - moving it around (ETL), 
+  - moving it around (ETL, ELT), 
   - handling transactions, 
   - building software, 
   - and finding new business ideas. 
@@ -42,12 +42,11 @@ Moreover, batch processing is not very flexible. If the data changes or somethin
 
 In the next part of the lecture, we'll discuss how stream processing can help overcome these limitations.
 
+##  Data.
 
-##  Data. From data file to data lake
+The advancement of information technology has revolutionized the way we `access` and `utilize` data. With the availability of vast amounts of both `structured` and `unstructured` data, new opportunities have emerged for scientific and business challenges.
 
-The advancement of information technology has revolutionized the way we access and utilize data. With the availability of vast amounts of both structured and unstructured data, new opportunities have emerged for scientific and business challenges.
-
-Data plays a crucial role in the creation, collection, storage, and processing of information on an unprecedented scale. This has led to the development of numerous tools and technologies that enable us to harness the power of data.
+Data plays a crucial role in the `creation`, `collection`, `storage`, and `processing` of information on an unprecedented scale. This has led to the development of numerous tools and technologies that enable us to harness the power of data.
 
 Thanks to open-source software and the computing power of home computers, we can now tackle complex problems and explore new frontiers in various domains. The possibilities are endless as we continue to push the boundaries of data-driven innovation.
 
@@ -61,9 +60,9 @@ The new era of business and scientific challenges brings forth a multitude of op
 
 As we enter the data age, we face not only the challenge of handling large quantities of data but also the need for faster data processing.
 
-Machine learning algorithms rely on structured data in tabular form. This data is organized into columns representing characteristics that describe each observation or row. For example, these characteristics could include sex, height, or the number of cars owned. These features are used to predict whether a customer will repay a loan or not. This prediction is also included as a feature. By utilizing tables of features created in this manner, we can employ algorithms like XGBoost or logistic regression to determine the optimal combination of variables that influence the probability of a good or bad customer.
+Machine learning algorithms rely on `structured data` in tabular form. This data is organized into columns representing characteristics that describe each observation or row. For example, these characteristics could include sex, height, or the number of cars owned. These features are used to predict whether a customer will repay a loan or not. This prediction is also included as a feature. By utilizing tables of features created in this manner, we can employ algorithms like XGBoost or logistic regression to determine the optimal combination of variables that influence the probability of a good or bad customer.
 
-**Unstructured data** refers to data that does not have a predefined structure or format, such as sound, images, and text. Unlike structured data, which is organized in a tabular form with columns and rows, unstructured data lacks a consistent organization.
+**Unstructured data** refers to data that does not have a predefined structure or format, such as `sound`, `images`, and `text`. Unlike structured data, which is organized in a tabular form with columns and rows, unstructured data lacks a consistent organization.
 
 When processing unstructured data, it is often converted into a vector form to enable analysis and extraction of meaningful insights. However, individual elements like letters, frequencies, or pixels do not convey specific information on their own. They need to be transformed and analyzed collectively to derive valuable features and patterns.
 
@@ -76,43 +75,33 @@ Understanding the distinction between structured and unstructured data is crucia
 
 ## Data sources
 
-The three largest data `generators` are:
+The three largest data generators are:
 
-- social data in the form of texts (tweets, entries in social networks, comments), photos or videos.
-    These data are very important due to their wide possibilities of consumer behaviour and sentiment analysis in marketing analyses.
-- data from all kinds of sensors or logs of the operation of devices and users (e.g. on a website).
-    These data are related to IoT (Internet of Things) technology, which is currently one of the most developing areas in data processing, but also in the business direction.
-- Transaction data, which is generally what is always generated as transactions appearing both online and offline.
-    Currently, this type of data is processed for the purpose of performing transactions and rich analytics supporting virtually every area of ​​everyday life.
+1. Social data: This includes texts (tweets, social network posts, comments), photos, and videos. Social data is valuable for consumer behavior analysis and sentiment analysis in marketing.
+
+2. Sensor and log data: These are generated by various devices and users, such as IoT devices and website logs. Sensor and log data play a crucial role in IoT technology and are widely used in data processing and business applications.
+
+3. Transaction data: This type of data is generated from online and offline transactions. Transaction data is essential for performing transactions and conducting comprehensive analytics across various domains.
+
 
 ## Actual data generation process
 
-The data that is in reality appears as a result of the continuous operation of the systems.
-You have generated a lot of data on your phone today (and even on these devices!)
-Will it not generate them early or tomorrow?
-Batch processing splits the data into a time-length chunk and runs granular processes at a user-specified time
-. However, the timestamp is not always appropriate.
+The data generated in reality is a continuous stream produced by various systems and devices. For example, your phone alone generates a significant amount of data every day. This continuous generation of data is not limited to a specific time frame.
 
-With many systems that handle the data streams that you already have.
-They are e.g.:
-- data warehouses
-- devices monitoring systems (IoT)
-- transaction systems
-- website analytics systems
-- Internet advertising
-- social media
-- operating systems
-- ....
+Batch processing, which involves dividing data into chunks based on a specified time interval, is one approach to processing data. However, this approach may not always be suitable, especially when dealing with real-time data streams.
 
-> a company is an organization that works and responds to a constant stream of data.
+To handle the continuous flow of data from different sources, various systems have been designed, including `data warehouses`, `IoT device monitoring systems`, `transaction systems`, `website analytics systems`, `internet advertising platforms`, `social media platforms`, and `operating systems`.
 
-The input to the orchard source (but also the result of the evaluation) of the data is the **file**.
-It is written once and can be referred to (multiple functions - tasks can run on it).
-The name of the file to identify the record set.
+These systems play a crucial role in processing and analyzing the data stream, enabling organizations to gain valuable insights and make informed decisions.
 
-In the case of the stream of change, it is only once through the so-called _manufacturer_ (also referred to as the sender or supplier).
-They can be formed by many so-called _consumers_ (recipients).
-Streaming events are grouped into so-called **topic** (eng. **topic**).
+
+> **A company is an organization that works and responds to a constant stream of data.**
+
+In traditional data processing, the input to the data source (and also the output of the evaluation) is typically a **file**. This file is written once and can be referenced by multiple functions or tasks.
+
+On the other hand, in stream processing, data flows through a continuous stream of changes. This stream is generated by a source, often referred to as the "manufacturer", "sender", or "supplier". The stream can be consumed by multiple recipients, known as "consumers". The events in the stream are organized into topics.
+
+Topics serve as a way to group related events together, allowing for efficient processing and analysis of the streaming data.
 
 ## not to Big Data
 
@@ -120,56 +109,58 @@ Streaming events are grouped into so-called **topic** (eng. **topic**).
 
 ### one, two, ... four V
 
-1. **Volume** - the size of the data produced worldwide is growing exponentially. Huge amounts of data are being generated every second - the email you send, Twitter, Facebook, or other social media, videos, pictures, SMS messages, call records and data from varied devices and sensors.
-2. **Velocity** - the speed of data production, the speed of their transfer and processing.
-3. **Variety** - we associate traditional data with an alphanumeric form composed of letters and numbers. Currently, we have images, sounds, videos and IoT data streams at our disposal
-4. **Veracity** - Is the data complete and correct? Do they objectively reflect reality? Are they the basis for making decisions?
-5. **Value** - The value that the data holds. In the end, it's all about cost and benefits.
+1. **Volume** - The amount of data being generated worldwide is increasing rapidly. Students can benefit from understanding how to handle and analyze large volumes of data efficiently.
+
+2. **Velocity** - Data is being produced and transferred at a high speed. Students need to learn how to process and analyze data in real-time to keep up with the fast-paced nature of data streams.
+
+3. **Variety** - Data comes in various forms, including text, images, videos, and IoT data. Students should be familiar with different data types and know how to work with them effectively.
+
+4. **Veracity** - Students need to understand the importance of data quality and reliability. They should learn how to evaluate the accuracy and completeness of data to make informed decisions based on reliable information.
+
+5. **Value** - Students should recognize the value that data holds and how it can be used to gain insights and make informed decisions. Understanding the potential benefits and costs associated with data analysis is crucial for students in various fields of study.
 
 > _The purpose of calculations is not numbers, but understanding them_ R.W. Hamming 1962.  
 
 
-As You can see data and data processing have been omnipresent in businesses for many decades.
-Over the years the collection and usage of data have grown consistently, and companies have designed and built infrastructures to manage that data.
+Data and data processing have been integral to businesses for many decades. As time has passed, the collection and utilization of data have steadily increased, leading companies to develop robust infrastructures to manage and process this data effectively.
 
 ## Data processing models
 
-The traditional architecture that most businesses implement distinguishes two types of data processing.
+### Traditional Data Processing Model
 
-Most of the data is stored in databases or data warehouses.
-By default, access to data comes down to the implementation of queries via applications.
-The method of using and implementing the database access process is called the **processing model**.
-Two implementations are most commonly used:
+In the traditional data processing model, businesses typically implement two types of data processing: 
 
-### Traditional Model
+1. **Online Transaction Processing (OLTP)**: This model is suitable for ongoing services such as `customer service`, `order registration`, or `sales`. It involves applications that interact with external services or human users and continuously process incoming events. When an event is processed, the application reads or updates its state by running transactions against a remote database system. This model provides effective solutions for data storage, transactional data recovery, data access optimization, concurrency management, and event processing.
 
-**Traditional model** - on-line transaction processing, OLTP (on-line transaction processing).
-It works great in the case of ongoing service, e.g. customer service, order register, sales service, etc.
-Companies use all kinds of applications for their day-to-day business activities, such as Enterprise Resource Planning (ERP) Systems, Customer Relationship Management (CRM) software, and web-based applications.
-These systems are typically designed with separate tiers for data processing and data storage (transactional database system).
+2. **Database Query Model**: Most of the data is stored in databases or data warehouses, and access to the data is implemented through queries via applications. This model focuses on the method of using and implementing the database access process. The two most commonly used implementations are:
+
+    a. **Relational Database Model**: This model organizes data into tables with predefined relationships between them. It uses Structured Query Language (SQL) to perform operations such as querying, inserting, updating, and deleting data.
+
+    b. **Data Warehouse Model**: This model is designed for analytical processing and decision-making. It involves extracting, transforming, and loading data from various sources into a central repository, known as a data warehouse. The data in the warehouse is organized in a way that facilitates complex queries and analysis.
+
+Understanding these traditional data processing models is essential for businesses to effectively manage and process their data.
 
 <!-- <img alt="OLTP system" src="img/baza1.png" align="center" /> -->
 ![](img/baza1.png){.center}
 
-Applications are usually connected to external services or face human users and continuously process incoming events such as orders, emails, or clicks on a website.
 
-When **an event** is processed, an application reads its state or updates it by running transactions against the remote database system. Often, a database system serves multiple applications that sometimes access the same databases or tables.
+This model offers effective solutions for:
 
-This model provides effective solutions for:
+- Efficient and secure data storage
+- Transactional data recovery in case of failures
+- Optimization of data access
+- Concurrency management
+- Event processing, involving reading and writing data
 
-- effective and safe data storage,
-- transactional data recovery after a failure,
-- data access optimization,
-- concurrency management,
-- event processing -> read -> write
+In addition to the benefits, the new data processing model and data warehouse database are particularly useful in scenarios involving:
 
-And what if we are dealing with:
+- Aggregation of data from multiple systems, such as consolidating data from various stores or branches.
+- Supporting data analysis by providing a centralized repository for performing complex queries and analysis.
+- Generating data reports and summaries for business intelligence purposes.
+- Optimizing complex queries to improve performance and efficiency.
+- Supporting informed business decisions by providing reliable and up-to-date data.
 
-- aggregation of data from many systems (e.g. for many stores),
-- supporting data analysis,
-- data reporting and summaries,
-- optimization of complex queries,
-- supporting business decisions.
+These capabilities make the new data processing model and data warehouse database an ideal choice for organizations that require robust data management and analysis capabilities.
 
 Research on such issues has led to the formulation of a new data processing model and a new type of database _(Data warehouse)_.
 
