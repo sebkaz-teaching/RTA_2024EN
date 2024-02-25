@@ -7,6 +7,7 @@ In recent times, a new way of handling data called `stream processing` has becom
 It's like a supercharged version of how we used to work with data.
 
 This new method is really good at solving the problems that old-fashioned data systems had trouble with, especially things like:
+
   - analyzing data, 
   - moving it around (ETL), 
   - handling transactions, 
@@ -69,37 +70,6 @@ When processing unstructured data, it is often converted into a vector form to e
 Understanding the distinction between structured and unstructured data is crucial for effective data processing and analysis.
 
 > Give an example of structured and unstructured data. Load sample data in jupyter notebook.
-
-### Example of structured data
-```{python}
-import pandas as pd
-```
-### Create a DataFrame with structured data
-```{python}
-data = {'Name': ['John', 'Jane', 'Mike'],
-    'Age': [25, 30, 35],
-    'City': ['New York', 'London', 'Paris']}
-df = pd.DataFrame(data)
-```
-### Display the structured data
-```{python}
-print("Structured Data:")
-print(df)
-```
-### Example of unstructured data
-```{python}
-import nltk
-```
-### Load sample unstructured text data
-```{python}
-nltk.download('gutenberg')
-from nltk.corpus import gutenberg
-```
-### Display the unstructured data
-```{python}
-print("\nUnstructured Data:")
-print(gutenberg.raw('shakespeare-hamlet.txt'))
-```
 
 > Knows the types of structured and unstructured data (K2A_W02, K2A_W04, O2_W04, O2_W07)
 
