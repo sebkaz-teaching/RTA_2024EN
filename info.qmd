@@ -44,7 +44,7 @@ source <name of your env>/bin/activate
 jupyterlab
 ```
 
-
+<!-- 
 ## Python env with JupyterLAB Docker Version
 
 ### Cookiecutter project 
@@ -83,13 +83,12 @@ docker-compose down
 Clone repo and run:
 ```bash 
 python3 -m cookiecutter https://github.com/sebkaz/jupyterlab-project --no-input --config-file=spark_template.yml --overwrite-if-exists
-```
+``` -->
 
 
-## Start with GitHub
+## Start working with GitHub
 
 Text from [web site](http://pbiecek.github.io/Przewodnik/Programowanie/jak_korzystac_z_serwisu_github_i_waffle.html)
-
 
 
 When You working on a project, e.g. a master's thesis, (alone or in a team) you often need to check what changes, when and by whom were introduced to the project.
@@ -165,8 +164,6 @@ git push origin master
 You can watch [Youtube course](https://www.youtube.com/watch?v=HVsySz-h9r4).
 
 
-
-
 All the necessary programs will be delivered in the form of docker containers.
 
 ## Start with Docker
@@ -206,8 +203,3 @@ docker rm -f <CONTAINER ID>
 ```
 
 I also recommend [short intro](https://medium.com/codingthesmartway-com-blog/docker-beginners-guide-part-1-images-containers-6f3507fffc98)
-
-
-## Docker as an application continuation tool
-
-[Docker with jupyter notebook](https://hub.docker.com/repository/docker/sebkaz/docker-data-science)

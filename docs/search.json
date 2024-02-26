@@ -154,18 +154,11 @@
     "text": "For our first a few laboratories we will use just python codes. Check what is Your Python3 environment.\nIn the terminal try first:\npython\n# and\npython3\nI have python3 (You shouldn’t use python 2.7 version) so i create a new and a clear python environment.\nThe easiest way how to run a JupyterLab with your new python env. For  You can choose what You want.\npython3 -m venv &lt;name of Your env&gt;\n\nsource &lt;name of your env&gt;/bin/activate\n# . env/bin/activate\npip install --no-cache --upgrade pip setuptools\n\npip install jupyterlab numpy pandas matplotlib scipy\n# or\npip install -r requirements.txt\n\njupyterlab\ngo to web browser: localhost:8888\nIf You want rerun jupyterlab (after computer reset) just go to Your folder and run:\nsource &lt;name of your env&gt;/bin/activate\njupyterlab"
   },
   {
-    "objectID": "info.html#python-env-with-jupyterlab-docker-version",
-    "href": "info.html#python-env-with-jupyterlab-docker-version",
+    "objectID": "info.html#start-working-with-github",
+    "href": "info.html#start-working-with-github",
     "title": "All tools",
-    "section": "Python env with JupyterLAB Docker Version",
-    "text": "Python env with JupyterLAB Docker Version\n\nCookiecutter project\nFrom GitHub repository You can find how to use a cookiecutter for any data science project or other kind of programs.\nTo run and build full dockerfile project: Create python env and install cookiecutter library.\npython3 -m venv venv\nsource venv/bin/activate\npip --no-cache install --upgrade pip setuptools\npip install cookiecutter\nand run:\ncookiecutter https://github.com/sebkaz/jupyterlab-project\nYou can run a cookiecutter project directly from GitHub repo.\nAnswer questions:\ncd jupyterlab\ndocker-compose up -d --build\nTo stop:\ndocker-compose down\n\n\nCookiecutter with config yaml file\n\nPython, Julia, R\nAll + Apache Spark\n\nClone repo and run:\npython3 -m cookiecutter https://github.com/sebkaz/jupyterlab-project --no-input --config-file=spark_template.yml --overwrite-if-exists"
-  },
-  {
-    "objectID": "info.html#start-with-github",
-    "href": "info.html#start-with-github",
-    "title": "All tools",
-    "section": "Start with GitHub",
-    "text": "Start with GitHub\nText from web site\nWhen You working on a project, e.g. a master’s thesis, (alone or in a team) you often need to check what changes, when and by whom were introduced to the project. The “version control system” or GIT works great for this task.\nYou can download and install Git like a regular program on any computer. However, most often (small projects) you use websites with some kind of git system. One of the most recognized is GitHub (www.github.com) which allows you to use the git system without installing it on your computer.\nIn the free version of the GitHub website, you can store your files in public (everyone has access) repositories. We will only focus on the free version of GitHub:\ngit --version"
+    "section": "Start working with GitHub",
+    "text": "Start working with GitHub\nText from web site\nWhen You working on a project, e.g. a master’s thesis, (alone or in a team) you often need to check what changes, when and by whom were introduced to the project. The “version control system” or GIT works great for this task.\nYou can download and install Git like a regular program on any computer. However, most often (small projects) you use websites with some kind of git system. One of the most recognized is GitHub (www.github.com) which allows you to use the git system without installing it on your computer.\nIn the free version of the GitHub website, you can store your files in public (everyone has access) repositories. We will only focus on the free version of GitHub:\ngit --version"
   },
   {
     "objectID": "info.html#github",
@@ -180,13 +173,6 @@
     "title": "All tools",
     "section": "Start with Docker",
     "text": "Start with Docker\nIn order to download the docer software to your system, go to the page.\nIf everything is installed correctly, follow these instructions:\n\nCheck the installed version\n\ndocker --version\n\nDownload and run the image Hello World and\n\ndocker run hello-world\n\nOverview of downloaded images:\n\ndocker image ls\n\ndocker images\n\nOverview of running containers:\n\ndocker ps \n\ndocker ps -all\n\nStopping a running container:\n\ndocker stop &lt;CONTAINER ID&gt;\n\nContainer removal\n\ndocker rm -f &lt;CONTAINER ID&gt;\nI also recommend short intro"
-  },
-  {
-    "objectID": "info.html#docker-as-an-application-continuation-tool",
-    "href": "info.html#docker-as-an-application-continuation-tool",
-    "title": "All tools",
-    "section": "Docker as an application continuation tool",
-    "text": "Docker as an application continuation tool\nDocker with jupyter notebook"
   },
   {
     "objectID": "lecture1.html",
