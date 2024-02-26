@@ -42,7 +42,10 @@ Moreover, batch processing is not very flexible. If the data changes or somethin
 
 In the next part of the lecture, we'll discuss how stream processing can help overcome these limitations.
 
-##  Data.
+##  Data
+
+When you think of data, you may think of piles of bytes sitting in data warehouses, in rational databases, or on distributed filesystems. Systems like these have trained us to think of data in its resting state. When you need to process it, you run some query or job against the pile of bytes.
+
 
 The advancement of information technology has revolutionized the way we `access` and `utilize` data. With the availability of vast amounts of both `structured` and `unstructured` data, new opportunities have emerged for scientific and business challenges.
 
