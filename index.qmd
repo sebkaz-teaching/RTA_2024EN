@@ -23,13 +23,21 @@ If You don't know what Python is go [here](/info).
 Lectures are OPTIONAL and takes place in G-208.
 
 1. <del>26-02-2024 (Monday) 08:00-9:30 - Lecture 1</del>
-    The lecture covers:
-    - Introduction informations,
-    - structured and unstructured data, 
-    - introduction to Big Data, 
-    - data generation processes, 
 
-2. 04-03-2024 (Monday) 08:00-9:30 - Lecture 2
+The lecture covers:
+
+- Introduction informations,
+- structured and unstructured data, 
+- introduction to Big Data, 
+- data generation processes, 
+- OLTP vs OLAP 
+
+2. <del>04-03-2024 (Monday) 08:00-9:30 - Lecture 2</del>
+
+The lecture covers:
+- Time for buisnees decision,
+- ETL, ELT and MapReduce, 
+- Events and stream data definitions 
 
 3. 11-03-2024 (Monday) 08:00-9:30 - Lecture 3
 
