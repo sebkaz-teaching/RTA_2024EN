@@ -2,11 +2,13 @@
 title: "Lecture 4 - Streaming architecture"
 ---
 
-A streaming architecture is a defined set of technologies that work together to handle stream processing, which is the practice of taking action on a series of data at the time the data is created. In many modern deployments, Apache Kafka acts as the store for the streaming data, and then multiple stream processors can act on the data stored in Kafka to produce multiple outputs. Some streaming architectures include workflows for both stream processing and batch processing, which either entail other technologies to handle large-scale batch processing or use Kafka as the central store as specified in the Kappa Architecture.
+A streaming architecture is a defined set of technologies that work together to handle stream processing, which is the practice of taking action on a series of data at the time the data is created. 
+In many modern deployments, Apache Kafka acts as the store for the streaming data, and then multiple stream processors can act on the data stored in Kafka to produce multiple outputs. 
+Some streaming architectures include workflows for both stream processing and batch processing, which either entail other technologies to handle large-scale batch processing or use Kafka as the central store as specified in the Kappa Architecture.
 
 An excellent real-time data processing architecture needs to be fault-tolerant and scalable; it needs to support batch and incremental updates and be extensible.
 
-In the beginning, we explore two essential data processing architectures, `Lambda` and `Kappa`, that serve as the backbone of various enterprise applications.
+At the beginning, we explore two essential data processing architectures, `Lambda` and `Kappa`, that serve as the backbone of various enterprise applications.
 
 
 ## Lambda architecture
@@ -15,14 +17,21 @@ In the beginning, we explore two essential data processing architectures, `Lambd
 Lambda architecture comprises `Batch Layer`, `Speed Layer` (the Stream layer), and `Serving Layer`.
 
 
-_The batch layer_ operates on the complete data and thus allows the system to produce the most accurate results. However, the results come at the cost of high latency due to high computation time. 
-The batch layer stores the raw data as it arrives and computes the batch views for consumption. Naturally, batch processes will occur at some interval and will be long-lived. The scope of data is anywhere from hours to years.
+_The batch layer_ operates on the complete data and thus allows the system to produce the most accurate results. 
+However, the results come at the cost of high latency due to high computation time. 
+The batch layer stores the raw data as it arrives and computes the batch views for consumption.
+Naturally, batch processes will occur at some interval and will be long-lived. 
+The scope of data is from hours to years.
 
 
-_The speed layer_ generates results in a low-latency, near real-time fashion. The speed layer computes the real-time views to complement the batch views. The speed layer receives the arriving data and updates the batch layer results. The computation cost is significantly reduced thanks to the incremental algorithms implemented at the speed layer.
+_The speed layer_ generates results in a low-latency, near real-time fashion. 
+The speed layer computes the real-time views to complement the batch views. 
+The speed layer receives the arriving data and updates the batch layer results. 
+The computation cost is significantly reduced thanks to the incremental algorithms implemented at the speed layer.
 The batch views may be processed with more complex or expensive rules and may have better data quality and less skew, while the real-time views give you up-to-the-moment access to the latest possible data.
 
-Finally, the _serving layer_ enables various queries of the results sent from the batch and speed layers. The outputs from the batch layer in the form of batch views and the speed layer in the form of near-real-time opinions are forwarded to the serving layer, which uses this data to cater to the pending queries on an ad-hoc basis.
+Finally, the _serving layer_ enables various queries of the results sent from the batch and speed layers.
+The outputs from the batch layer in the form of batch views and the speed layer in the form of near-real-time opinions are forwarded to the serving layer, which uses this data to cater to the pending queries on an ad-hoc basis.
 
 </br>
 <img src = "img/lambda_arch.png" class="center" />
@@ -73,7 +82,7 @@ Implementation Example:
 
 ### Bad
 
-1. not easy to implement, especially for the data replay.
+1. Not easy to implement, especially for the data replay.
 
 
 ### How do the Lambda and Kappa compare? 
@@ -85,7 +94,8 @@ As suggested by the Lambda Architecture, there is no separate technology to hand
 
 With a sufficiently fast-stream processing engine, you may not need a different technology optimized for batch processing. 
 You read the stored streaming data in parallel (assuming the data in Kafka is appropriately split into separate channels, or “partitions”) and transform the data as if it were from a streaming source.
-For some environments, you can create the analyzable output on demand. When a new query is submitted from an end user, the data can be transformed ad hoc to answer that query optimally.
+For some environments, you can create the analyzable output on demand. 
+When a new query is submitted from an end user, the data can be transformed ad hoc to answer that query optimally.
 Again, this requires a high-speed stream processing engine to enable low latency.
 
 While the Lambda Architecture does not specify the technologies that must be used, the batch processing component is often done on a large-scale data platform like Apache Hadoop. 

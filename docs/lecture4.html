@@ -208,11 +208,11 @@ window.Quarto = {
 
 <p>A streaming architecture is a defined set of technologies that work together to handle stream processing, which is the practice of taking action on a series of data at the time the data is created. In many modern deployments, Apache Kafka acts as the store for the streaming data, and then multiple stream processors can act on the data stored in Kafka to produce multiple outputs. Some streaming architectures include workflows for both stream processing and batch processing, which either entail other technologies to handle large-scale batch processing or use Kafka as the central store as specified in the Kappa Architecture.</p>
 <p>An excellent real-time data processing architecture needs to be fault-tolerant and scalable; it needs to support batch and incremental updates and be extensible.</p>
-<p>In the beginning, we explore two essential data processing architectures, <code>Lambda</code> and <code>Kappa</code>, that serve as the backbone of various enterprise applications.</p>
+<p>At the beginning, we explore two essential data processing architectures, <code>Lambda</code> and <code>Kappa</code>, that serve as the backbone of various enterprise applications.</p>
 <section id="lambda-architecture" class="level2">
 <h2 class="anchored" data-anchor-id="lambda-architecture">Lambda architecture</h2>
 <p>Lambda architecture comprises <code>Batch Layer</code>, <code>Speed Layer</code> (the Stream layer), and <code>Serving Layer</code>.</p>
-<p><em>The batch layer</em> operates on the complete data and thus allows the system to produce the most accurate results. However, the results come at the cost of high latency due to high computation time. The batch layer stores the raw data as it arrives and computes the batch views for consumption. Naturally, batch processes will occur at some interval and will be long-lived. The scope of data is anywhere from hours to years.</p>
+<p><em>The batch layer</em> operates on the complete data and thus allows the system to produce the most accurate results. However, the results come at the cost of high latency due to high computation time. The batch layer stores the raw data as it arrives and computes the batch views for consumption. Naturally, batch processes will occur at some interval and will be long-lived. The scope of data is from hours to years.</p>
 <p><em>The speed layer</em> generates results in a low-latency, near real-time fashion. The speed layer computes the real-time views to complement the batch views. The speed layer receives the arriving data and updates the batch layer results. The computation cost is significantly reduced thanks to the incremental algorithms implemented at the speed layer. The batch views may be processed with more complex or expensive rules and may have better data quality and less skew, while the real-time views give you up-to-the-moment access to the latest possible data.</p>
 <p>Finally, the <em>serving layer</em> enables various queries of the results sent from the batch and speed layers. The outputs from the batch layer in the form of batch views and the speed layer in the form of near-real-time opinions are forwarded to the serving layer, which uses this data to cater to the pending queries on an ad-hoc basis.</p>
 <p><br> <img src="img/lambda_arch.png" class="center"></p>
@@ -246,7 +246,7 @@ window.Quarto = {
 <section id="bad" class="level3">
 <h3 class="anchored" data-anchor-id="bad">Bad</h3>
 <ol type="1">
-<li>not easy to implement, especially for the data replay.</li>
+<li>Not easy to implement, especially for the data replay.</li>
 </ol>
 </section>
 <section id="how-do-the-lambda-and-kappa-compare" class="level3">
