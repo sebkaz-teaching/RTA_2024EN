@@ -24,26 +24,13 @@ Lectures are OPTIONAL and takes place in G-208.
 
 1. <del>26-02-2024 (Monday) 08:00-9:30 - Lecture 1</del>
 
-The lecture covers:
-
-- Introduction informations,
-- structured and unstructured data, 
-- introduction to Big Data, 
-- data generation processes, 
-- OLTP vs OLAP 
-
 2. <del>04-03-2024 (Monday) 08:00-9:30 - Lecture 2</del>
-
-The lecture covers:
-- Time for buisnees decision,
-- ETL, ELT and MapReduce, 
-- Events and stream data definitions 
 
 3. <del>11-03-2024 (Monday) 08:00-9:30 - Lecture 3</del>
 
 4. <del>18-03-2024 (Monday) 08:00-9:30 - Lecture 4</del>
 
-5. 25-03-2024 (Monday) 08:00-9:30 - Lecture 5
+5. <del>25-03-2024 (Monday) 08:00-9:30 - Lecture 5</del>
 
 Lectures end with a TEST: 20 questions - 30 minutes.
 
@@ -51,15 +38,15 @@ The test will be conducted using MS Teams.
 
 #### Labs
 
-1. 09-04-2024 (Tuesday) 9:50-11:30 - C2B 
-2. 16-04-2024 (Tuesday) 9:50-11:30 - C2B
-3. 23-04-2024 (Tuesday) 9:50-11:30 - C2B 
-4. 30-04-2024 (Tuesday) 9:50-11:30 - C2B 
-5. 07-05-2024 (Tuesday) 9:50-11:30 - C2B 
-6. 14-05-2024 (Tuesday) 9:50-11:30 - C2B 
-7. 21-05-2024 (Tuesday) 9:50-11:30 - C2B 
-8. 28-05-2024 (Tuesday) 9:50-11:30 - C2B 
-9. 04-06-2023 (Tuesday) 9:50-11:30 - C2B
+1. 09-04-2024 (Tuesday) 9:50-11:30 - DS1-16 
+2. 16-04-2024 (Tuesday) 9:50-11:30 - DS1-16
+3. 23-04-2024 (Tuesday) 9:50-11:30 - DS1-16 
+4. 30-04-2024 (Tuesday) 9:50-11:30 - DS1-16 
+5. 07-05-2024 (Tuesday) 9:50-11:30 - DS1-16 
+6. 14-05-2024 (Tuesday) 9:50-11:30 - DS1-16 
+7. 21-05-2024 (Tuesday) 9:50-11:30 - DS1-16 
+8. 28-05-2024 (Tuesday) 9:50-11:30 - DS1-16 
+9. 04-06-2023 (Tuesday) 9:50-11:30 - DS1-16
 
 #### Place
 
