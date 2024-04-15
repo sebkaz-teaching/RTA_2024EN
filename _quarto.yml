@@ -17,6 +17,7 @@ website:
       - section: "Laboratories"
         contents: 
         - lab/lab1.ipynb
+        - lab/lab2.ipynb
   navbar:
     left: 
           - href: index.qmd
