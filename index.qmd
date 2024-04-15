@@ -38,7 +38,7 @@ The test will be conducted using MS Teams.
 
 #### Labs
 
-1. 09-04-2024 (Tuesday) 9:50-11:30 - DS1-16 
+1. <del>09-04-2024 (Tuesday) 9:50-11:30 - DS1-16 </del>
 2. 16-04-2024 (Tuesday) 9:50-11:30 - DS1-16
 3. 23-04-2024 (Tuesday) 9:50-11:30 - DS1-16 
 4. 30-04-2024 (Tuesday) 9:50-11:30 - DS1-16 
@@ -51,7 +51,7 @@ The test will be conducted using MS Teams.
 #### Place
 
 Lectures 1-4: G-208
-Labs 1-10: C-2B
+Labs 1-10: Sabinki 16
 
 #### Exam
 
