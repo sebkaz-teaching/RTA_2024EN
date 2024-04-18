@@ -39,7 +39,7 @@ The test will be conducted using MS Teams.
 #### Labs
 
 1. <del>09-04-2024 (Tuesday) 9:50-11:30 - DS1-16 </del>
-2. 16-04-2024 (Tuesday) 9:50-11:30 - DS1-16
+2. <del>16-04-2024 (Tuesday) 9:50-11:30 - DS1-16 </del>
 3. 23-04-2024 (Tuesday) 9:50-11:30 - DS1-16 
 4. 30-04-2024 (Tuesday) 9:50-11:30 - DS1-16 
 5. 07-05-2024 (Tuesday) 9:50-11:30 - DS1-16 
