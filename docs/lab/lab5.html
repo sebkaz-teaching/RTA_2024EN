@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Real-Time Analytics - Structured data</title>
+<title>Real-Time Analytics - Python OOP - Percepron Class</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -181,7 +181,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lab/lab1.html">Laboratories</a></li><li class="breadcrumb-item"><a href="../lab/lab5.html">Structured data</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lab/lab1.html">Laboratories</a></li><li class="breadcrumb-item"><a href="../lab/lab5.html">Python OOP - Percepron Class</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -270,7 +270,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lab/lab5.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Structured data</span></a>
+ <span class="menu-text">Python OOP - Percepron Class</span></a>
   </div>
 </li>
       </ul>
@@ -285,7 +285,8 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#batch-gradient-descent" id="toc-batch-gradient-descent" class="nav-link active" data-scroll-target="#batch-gradient-descent">Batch Gradient Descent</a></li>
+  <li><a href="#structured-data" id="toc-structured-data" class="nav-link active" data-scroll-target="#structured-data">Structured data</a></li>
+  <li><a href="#batch-gradient-descent" id="toc-batch-gradient-descent" class="nav-link" data-scroll-target="#batch-gradient-descent">Batch Gradient Descent</a></li>
   <li><a href="#stochastic-gradient-descent" id="toc-stochastic-gradient-descent" class="nav-link" data-scroll-target="#stochastic-gradient-descent">Stochastic gradient descent</a></li>
   <li><a href="#perceptron-and-python-oop" id="toc-perceptron-and-python-oop" class="nav-link" data-scroll-target="#perceptron-and-python-oop">Perceptron and Python OOP</a>
   <ul class="collapse">
@@ -297,9 +298,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lab/lab1.html">Laboratories</a></li><li class="breadcrumb-item"><a href="../lab/lab5.html">Structured data</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lab/lab1.html">Laboratories</a></li><li class="breadcrumb-item"><a href="../lab/lab5.html">Python OOP - Percepron Class</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Structured data</h1>
+<h1 class="title">Python OOP - Percepron Class</h1>
 </div>
 
 
@@ -319,6 +320,8 @@ window.Quarto = {
 <div id="6b675f7f-e15a-4fcc-ac00-a9202855af6c" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> Image</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<section id="structured-data" class="level2">
+<h2 class="anchored" data-anchor-id="structured-data">Structured data</h2>
 <p>During the previous classes, we discussed the use of linear regression model for structured data. In the simplest case, for one variable X and one target variable, we could, for example, assign the model in the form:</p>
 <p>life_satisfaction = <span class="math inline">\(\alpha_0\)</span> + <span class="math inline">\(\alpha_1\)</span> GDP_per_capita</p>
 <p>We call <span class="math inline">\(\alpha_0\)</span> the intercept or bias term.</p>
@@ -414,6 +417,7 @@ prediction [[4.21509616]
 </div>
 </div>
 <p>Remember about variable standardization (to represent them on the same scale).</p>
+</section>
 <section id="batch-gradient-descent" class="level2">
 <h2 class="anchored" data-anchor-id="batch-gradient-descent">Batch Gradient Descent</h2>
 <p>For implementation, we need to calculate partial derivatives for the cost function with respect to each parameter <span class="math inline">\(\alpha_i\)</span>.</p>
