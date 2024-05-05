@@ -20,6 +20,7 @@ website:
         - lab/lab2.ipynb
         - lab/lab3.ipynb
         - lab/lab4.ipynb
+        - lab/lab5.ipynb
   navbar:
     left: 
           - href: index.qmd
